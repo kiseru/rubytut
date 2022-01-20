@@ -9,7 +9,7 @@ cars = [
     "Niva"
 ]
 
-puts "У нас всего " + cars.size.to_s + " машин. Вам какую?"
+puts "У нас всего #{cars.size} машин. Вам какую?"
 car_index = gets.chomp.to_i
 if car_index < 0 || car_index >= cars.size
     abort "Извините, машины с таким номером у нас нет :("
