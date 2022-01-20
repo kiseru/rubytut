@@ -52,4 +52,4 @@ else
     puts "Холодно"
 end
 
-abort "В этот раз вам не повезло. Было загадано число " + number_to_guess.to_s
+abort "В этот раз вам не повезло. Было загадано число #{number_to_guess}"
