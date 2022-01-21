@@ -11,9 +11,8 @@ cars = [
 
 puts "У нас всего #{cars.size} машин. Вам какую?"
 car_index = gets.chomp.to_i
-if car_index < 0 || car_index >= cars.size
-    abort "Извините, машины с таким номером у нас нет :("
-end
+
+abort "Извините, машины с таким номером у нас нет :(" unless car_index.between?(0, cars.size)
 
 puts "Поздравляю, вы получили:"
 puts cars[car_index]
