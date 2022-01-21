@@ -1,7 +1,11 @@
+NUMBER_OF_ATTEMPS = 3
+INTERVAL_START = 0
+INTERVAL_END = 16
+
 prng = Random.new()
-number_to_guess = prng.rand(0..15)
-puts "Загадано число от 0 до 16, отгадайте какое?"
-3.times do
+number_to_guess = prng.rand(INTERVAL_START...INTERVAL_END)
+puts "Загадано число от #{INTERVAL_START} до #{INTERVAL_END}, отгадайте какое?"
+NUMBER_OF_ATTEMPS.times do
     input = gets.chomp.to_i
 
     if number_to_guess == input
