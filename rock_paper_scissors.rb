@@ -1,23 +1,23 @@
-vars = [
-    "Камень",
-    "Ножницы",
-    "Бумага",
+# frozen_string_literal: true
+
+vars = %w[
+  Камень
+  Ножницы
+  Бумага
 ]
 
-puts "введите вариант: 0 - камень, 1 - ножницы, 2 - бумага"
+puts 'введите вариант: 0 - камень, 1 - ножницы, 2 - бумага'
 user_var = gets.chomp.to_i
-unless user_var in 0..2
-    abort "Некорректный ввод"
-end
+abort 'Некорректный ввод' unless (0..2).include? user_var
 
 puts "Вы выбрали: #{vars[user_var]}"
 prng = Random.new
 comp_var = prng.rand(0..2)
 puts "Компьютер выбрал: #{vars[comp_var]}"
 if user_var == comp_var
-    puts "Ничья"
-elsif user_var == 2 && comp_var == 0 || user_var < comp_var
-    puts "Вы победили"
+  puts 'Ничья'
+elsif user_var == 2 && comp_var.zero? || user_var < comp_var
+  puts 'Вы победили'
 else
-    puts "Победил Компьютер"
+  puts 'Победил Компьютер'
 end

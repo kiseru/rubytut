@@ -1,7 +1,9 @@
-number = 987298
+# frozen_string_literal: true
+
+number = 987_298
 puts number
-if number % 2 == 0
-    puts "Число четное"
+if number.even?
+  puts 'Число четное'
 else
-    puts "Число нечетное"
+  puts 'Число нечетное'
 end

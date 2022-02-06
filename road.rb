@@ -1,10 +1,12 @@
-puts "Start"
+# frozen_string_literal: true
+
+puts 'Start'
 sleep 1
-puts "Первый километр"
+puts 'Первый километр'
 sleep 1
-puts "Второй километр"
+puts 'Второй километр'
 sleep 1
-puts "Третий километр"
+puts 'Третий километр'
 sleep 1
-puts "Finish!"
+puts 'Finish!'
 gets

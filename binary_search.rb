@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def binary_search(array, item)
   low = 0
   high = array.size - 1
